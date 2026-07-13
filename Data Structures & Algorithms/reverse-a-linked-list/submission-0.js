@@ -1,0 +1,33 @@
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     constructor(val = 0, next = null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+
+class Solution {
+    /**
+     * @param {ListNode} head
+     * @return {ListNode}
+     */
+    reverseList(head) {
+        let current = head
+        let a = []
+        while(current!=null){
+            a.push(current.val)
+            current = current.next
+        }
+
+        a.reverse()
+        let d = head
+        for(let value of a){
+           d.val =value
+           d=d.next
+        }
+
+        return head
+    }
+}
